@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/ee6470/HW1/Gaussian1
+CMAKE_SOURCE_DIR = /home/user/ee6470/EE6470_HW1/Gaussian1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/ee6470/HW1/Gaussian1/build
+CMAKE_BINARY_DIR = /home/user/ee6470/EE6470_HW1/Gaussian1/build
 
 # Utility rule file for run.
 
@@ -57,7 +57,7 @@ CMakeFiles/run: out.bmp
 
 
 out.bmp: gaussian1
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/ee6470/HW1/Gaussian1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating out.bmp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/user/ee6470/EE6470_HW1/Gaussian1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating out.bmp"
 	./gaussian1 ../lena_std_short.bmp ./out.bmp
 
 run: CMakeFiles/run
@@ -76,6 +76,6 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 CMakeFiles/run.dir/depend:
-	cd /home/user/ee6470/HW1/Gaussian1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/HW1/Gaussian1 /home/user/ee6470/HW1/Gaussian1 /home/user/ee6470/HW1/Gaussian1/build /home/user/ee6470/HW1/Gaussian1/build /home/user/ee6470/HW1/Gaussian1/build/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/ee6470/EE6470_HW1/Gaussian1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/EE6470_HW1/Gaussian1 /home/user/ee6470/EE6470_HW1/Gaussian1 /home/user/ee6470/EE6470_HW1/Gaussian1/build /home/user/ee6470/EE6470_HW1/Gaussian1/build /home/user/ee6470/EE6470_HW1/Gaussian1/build/CMakeFiles/run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run.dir/depend
 

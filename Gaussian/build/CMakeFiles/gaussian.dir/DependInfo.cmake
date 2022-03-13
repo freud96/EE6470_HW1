@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/user/ee6470/HW1/Gaussian/GaussianFilter.cpp" "/home/user/ee6470/HW1/Gaussian/build/CMakeFiles/gaussian.dir/GaussianFilter.cpp.o"
-  "/home/user/ee6470/HW1/Gaussian/Testbench.cpp" "/home/user/ee6470/HW1/Gaussian/build/CMakeFiles/gaussian.dir/Testbench.cpp.o"
-  "/home/user/ee6470/HW1/Gaussian/main.cpp" "/home/user/ee6470/HW1/Gaussian/build/CMakeFiles/gaussian.dir/main.cpp.o"
+  "/home/user/ee6470/EE6470_HW1/Gaussian/GaussianFilter.cpp" "/home/user/ee6470/EE6470_HW1/Gaussian/build/CMakeFiles/gaussian.dir/GaussianFilter.cpp.o"
+  "/home/user/ee6470/EE6470_HW1/Gaussian/Testbench.cpp" "/home/user/ee6470/EE6470_HW1/Gaussian/build/CMakeFiles/gaussian.dir/Testbench.cpp.o"
+  "/home/user/ee6470/EE6470_HW1/Gaussian/main.cpp" "/home/user/ee6470/EE6470_HW1/Gaussian/build/CMakeFiles/gaussian.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

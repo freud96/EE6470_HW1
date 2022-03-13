@@ -54,5 +54,6 @@ private:
   unsigned char *target_bitmap;
 
   void do_sobel();
+  int nbr_pixel = 0;
 };
 #endif

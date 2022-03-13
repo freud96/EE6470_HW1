@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/ee6470/HW1/Gaussian
+CMAKE_SOURCE_DIR = /home/user/ee6470/EE6470_HW1/Gaussian
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/ee6470/HW1/Gaussian/build
+CMAKE_BINARY_DIR = /home/user/ee6470/EE6470_HW1/Gaussian/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gaussian.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/gaussian.dir/flags.make
 
 CMakeFiles/gaussian.dir/GaussianFilter.cpp.o: CMakeFiles/gaussian.dir/flags.make
 CMakeFiles/gaussian.dir/GaussianFilter.cpp.o: ../GaussianFilter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/HW1/Gaussian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gaussian.dir/GaussianFilter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaussian.dir/GaussianFilter.cpp.o -c /home/user/ee6470/HW1/Gaussian/GaussianFilter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/EE6470_HW1/Gaussian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gaussian.dir/GaussianFilter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaussian.dir/GaussianFilter.cpp.o -c /home/user/ee6470/EE6470_HW1/Gaussian/GaussianFilter.cpp
 
 CMakeFiles/gaussian.dir/GaussianFilter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gaussian.dir/GaussianFilter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/HW1/Gaussian/GaussianFilter.cpp > CMakeFiles/gaussian.dir/GaussianFilter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/EE6470_HW1/Gaussian/GaussianFilter.cpp > CMakeFiles/gaussian.dir/GaussianFilter.cpp.i
 
 CMakeFiles/gaussian.dir/GaussianFilter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gaussian.dir/GaussianFilter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/HW1/Gaussian/GaussianFilter.cpp -o CMakeFiles/gaussian.dir/GaussianFilter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/EE6470_HW1/Gaussian/GaussianFilter.cpp -o CMakeFiles/gaussian.dir/GaussianFilter.cpp.s
 
 CMakeFiles/gaussian.dir/Testbench.cpp.o: CMakeFiles/gaussian.dir/flags.make
 CMakeFiles/gaussian.dir/Testbench.cpp.o: ../Testbench.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/HW1/Gaussian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gaussian.dir/Testbench.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaussian.dir/Testbench.cpp.o -c /home/user/ee6470/HW1/Gaussian/Testbench.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/EE6470_HW1/Gaussian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gaussian.dir/Testbench.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaussian.dir/Testbench.cpp.o -c /home/user/ee6470/EE6470_HW1/Gaussian/Testbench.cpp
 
 CMakeFiles/gaussian.dir/Testbench.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gaussian.dir/Testbench.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/HW1/Gaussian/Testbench.cpp > CMakeFiles/gaussian.dir/Testbench.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/EE6470_HW1/Gaussian/Testbench.cpp > CMakeFiles/gaussian.dir/Testbench.cpp.i
 
 CMakeFiles/gaussian.dir/Testbench.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gaussian.dir/Testbench.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/HW1/Gaussian/Testbench.cpp -o CMakeFiles/gaussian.dir/Testbench.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/EE6470_HW1/Gaussian/Testbench.cpp -o CMakeFiles/gaussian.dir/Testbench.cpp.s
 
 CMakeFiles/gaussian.dir/main.cpp.o: CMakeFiles/gaussian.dir/flags.make
 CMakeFiles/gaussian.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/HW1/Gaussian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gaussian.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaussian.dir/main.cpp.o -c /home/user/ee6470/HW1/Gaussian/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/ee6470/EE6470_HW1/Gaussian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gaussian.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gaussian.dir/main.cpp.o -c /home/user/ee6470/EE6470_HW1/Gaussian/main.cpp
 
 CMakeFiles/gaussian.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gaussian.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/HW1/Gaussian/main.cpp > CMakeFiles/gaussian.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/ee6470/EE6470_HW1/Gaussian/main.cpp > CMakeFiles/gaussian.dir/main.cpp.i
 
 CMakeFiles/gaussian.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gaussian.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/HW1/Gaussian/main.cpp -o CMakeFiles/gaussian.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/ee6470/EE6470_HW1/Gaussian/main.cpp -o CMakeFiles/gaussian.dir/main.cpp.s
 
 # Object files for target gaussian
 gaussian_OBJECTS = \
@@ -111,7 +111,7 @@ gaussian: CMakeFiles/gaussian.dir/main.cpp.o
 gaussian: CMakeFiles/gaussian.dir/build.make
 gaussian: /opt/systemc/lib/libsystemc.so.2.3.3
 gaussian: CMakeFiles/gaussian.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/ee6470/HW1/Gaussian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable gaussian"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/ee6470/EE6470_HW1/Gaussian/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable gaussian"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gaussian.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/gaussian.dir/clean:
 .PHONY : CMakeFiles/gaussian.dir/clean
 
 CMakeFiles/gaussian.dir/depend:
-	cd /home/user/ee6470/HW1/Gaussian/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/HW1/Gaussian /home/user/ee6470/HW1/Gaussian /home/user/ee6470/HW1/Gaussian/build /home/user/ee6470/HW1/Gaussian/build /home/user/ee6470/HW1/Gaussian/build/CMakeFiles/gaussian.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/user/ee6470/EE6470_HW1/Gaussian/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/ee6470/EE6470_HW1/Gaussian /home/user/ee6470/EE6470_HW1/Gaussian /home/user/ee6470/EE6470_HW1/Gaussian/build /home/user/ee6470/EE6470_HW1/Gaussian/build /home/user/ee6470/EE6470_HW1/Gaussian/build/CMakeFiles/gaussian.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gaussian.dir/depend
 

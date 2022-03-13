@@ -52,6 +52,7 @@ private:
   unsigned short bytes_per_pixel;
   unsigned char *source_bitmap;
   unsigned char *target_bitmap;
+  int nbr_pixel = 0;
 
   void do_sobel();
 };

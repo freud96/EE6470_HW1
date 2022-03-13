@@ -149,6 +149,7 @@ void Testbench::do_sobel() {
             G = 0;
             B = 0;
           }
+          nbr_pixel +=3;
           o_r.write(R);
           o_g.write(G);
           o_b.write(B);
@@ -173,5 +174,6 @@ void Testbench::do_sobel() {
       }
     }
   }
+  std::cout << "\nThe number of pixel transferred: "<<nbr_pixel<<std::endl;
   sc_stop();
 }

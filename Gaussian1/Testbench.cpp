@@ -136,7 +136,8 @@ void Testbench::do_sobel() {
                   bytes_per_pixel * (width * (y ) + (x)) + 1);
             B = *(source_bitmap +
                   bytes_per_pixel * (width * (y ) + (x )) + 0);
-         // std::cout<<"line "<<y<<" R: "<<R<<" G: "<<G<<" B: ";
+
+          nbr_pixel+=3;
           o_r[x].write(R);
           o_g[x].write(G);
           o_b[x].write(B);
@@ -164,5 +165,6 @@ if(i_result[x].num_available()==0) wait(i_result[x].data_written_event());
     }
    // std::cout<<std::endl;
   }
+  std::cout << "\nThe number of pixel transferred: "<<nbr_pixel<<std::endl;
   sc_stop();
 }

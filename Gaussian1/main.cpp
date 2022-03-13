@@ -23,7 +23,7 @@ int sc_main(int argc, char **argv)
          << endl;
     return 0;
   }
-  std::cout << "read done1:\n";
+  
   // Create modules and signals
   Testbench tb("tb");
 
