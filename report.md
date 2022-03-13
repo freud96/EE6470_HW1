@@ -5,7 +5,7 @@ The GitHub repo link for HW1 is as follow: git@github.com:freud96/EE6470_HW1.git
 Introduction
     In Digital Signal Processing, Blurring is often used to make an object less clear or more different, as to facilitate performing analysis in in the hope to gather enough datas to identify objects. Gaussian Blur is a filter that uses a Gaussian Kernel. The main objective of the homework was to implement a Gaussian blur filter with SystemC modules connected with SystemC FIFO channels. The homework was devided into two parts; below are the descriptions of both parts 1 and 2, alongside the algorithm used to implement them.
 
-    The input image was given as :
+    The input image was given as 
     ![alt text](https://github.com/fredo96//EE6470_HW1/Gaussian/lena_std_short.bmp?raw=true)
 
 Part 1: Gaussian Blur with FIFO channels
