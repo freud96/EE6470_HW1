@@ -18,7 +18,7 @@ The GitHub repo link for HW1 is as follow: https://github.com/freud96/EE6470_HW1
     The system is synchronous, there is transfer of 3 color pixels from the testbench to the Gaussian filter module which will multiply each entry pixel by its corresponding kernel value. The number of pixel transfer sent/receive between the two modules is 589824. We have such huge amount because of the a single a to find the convolution of a centered pixel, the module also sends its other 8 neighborhood. so we can find the value as: 3*256*256*9. the simulation time is 655358 ns. 
     ![](result_part1.JPG)
     
-    the output image of part 1 can be found at : https://github.com/freud96/EE6470_HW1/blob/5e1c2192c286b3f372e8b836354b1500c7c59859/Gaussian/build/out.bmp
+    the output image of part 1 can be found at : https://github.com/freud96/EE6470_HW1/blob/ad1c79a48e7c6cf336408c127661e953f60841ac/Gaussian/build/out.bmp
     
 **Part 2: Data movement with row buffers**
     Because in part one the number of transfer made from the testbench module to the other module is high, we were asked to implement the modules such that the tranfer is based on row of pixels instead of every single pixel. To do that we modify the fifo variable to use array then map each port to its corresponding, the reason why we use array instead of just a simple 8-bit variable is to make it easier for the program to wait on the data output to be written.  
