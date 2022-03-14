@@ -20,6 +20,7 @@ void GaussianFilter::do_filter() {
         unsigned char grey = (i_r.read() + i_g.read() + i_b.read()) / 3;
         
           val +=  grey * mask[v][u];
+          
 
       }
     }

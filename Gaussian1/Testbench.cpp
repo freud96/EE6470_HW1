@@ -149,17 +149,11 @@ if(i_result[x].num_available()==0) wait(i_result[x].data_written_event());
       total = i_result[x].read();
       //cout << "Now at " << sc_time_stamp() << endl; //print current sc_time
 
-      if (total - THRESHOLD >= 0) {
-        // black
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 2) = BLACK;
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 1) = BLACK;
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 0) = BLACK;
-      } else {
-        // white
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 2) = WHITE;
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 1) = WHITE;
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 0) = WHITE;
-      }
+
+        *(target_bitmap + bytes_per_pixel * (width * y + x) + 2) = total;
+        *(target_bitmap + bytes_per_pixel * (width * y + x) + 1) = total;
+        *(target_bitmap + bytes_per_pixel * (width * y + x) + 0) = total;
+
 }
       
     }

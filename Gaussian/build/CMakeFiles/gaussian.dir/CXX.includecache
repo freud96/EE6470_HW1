@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/user/ee6470/EE6470_HW1/Gaussian/GaussianFilter.cpp
+cmath
+-
+GaussianFilter.h
+/home/user/ee6470/EE6470_HW1/Gaussian/GaussianFilter.h
+
 /home/user/ee6470/EE6470_HW1/Gaussian/GaussianFilter.h
 systemc
 -
@@ -31,18 +37,6 @@ filter_def.h
 /home/user/ee6470/EE6470_HW1/Gaussian/filter_def.h
 
 /home/user/ee6470/EE6470_HW1/Gaussian/filter_def.h
-
-/home/user/ee6470/EE6470_HW1/Gaussian/main.cpp
-iostream
--
-string
--
-sys/time.h
--
-GaussianFilter.h
-/home/user/ee6470/EE6470_HW1/Gaussian/GaussianFilter.h
-Testbench.h
-/home/user/ee6470/EE6470_HW1/Gaussian/Testbench.h
 
 /opt/systemc/include/sysc/communication/sc_buffer.h
 sysc/communication/sc_signal.h

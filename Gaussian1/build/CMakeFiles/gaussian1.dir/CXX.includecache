@@ -6,33 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/user/ee6470/EE6470_HW1/Gaussian1/GaussianFilter.h
-systemc
--
-filter_def.h
-/home/user/ee6470/EE6470_HW1/Gaussian1/filter_def.h
-
-/home/user/ee6470/EE6470_HW1/Gaussian1/Testbench.h
-string
--
-systemc
--
-filter_def.h
-/home/user/ee6470/EE6470_HW1/Gaussian1/filter_def.h
-
-/home/user/ee6470/EE6470_HW1/Gaussian1/filter_def.h
-
-/home/user/ee6470/EE6470_HW1/Gaussian1/main.cpp
-iostream
--
-string
--
-sys/time.h
+/home/user/ee6470/EE6470_HW1/Gaussian1/GaussianFilter.cpp
+cmath
 -
 GaussianFilter.h
 /home/user/ee6470/EE6470_HW1/Gaussian1/GaussianFilter.h
-Testbench.h
-/home/user/ee6470/EE6470_HW1/Gaussian1/Testbench.h
+
+/home/user/ee6470/EE6470_HW1/Gaussian1/GaussianFilter.h
+systemc
+-
+filter_def.h
+/home/user/ee6470/EE6470_HW1/Gaussian1/filter_def.h
+
+/home/user/ee6470/EE6470_HW1/Gaussian1/filter_def.h
 
 /opt/systemc/include/sysc/communication/sc_buffer.h
 sysc/communication/sc_signal.h
