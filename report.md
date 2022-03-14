@@ -2,21 +2,21 @@ Written by Freud L. Lewis Piercius, student ID: 110061422
 
 The GitHub repo link for HW1 is as follow: git@github.com:freud96/EE6470_HW1.git.
 
-Introduction
+**Introduction**
     In Digital Signal Processing, Blurring is often used to make an object less clear or more different, as to facilitate performing analysis in in the hope to gather enough datas to identify objects. Gaussian Blur is a filter that uses a Gaussian Kernel. The main objective of the homework was to implement a Gaussian blur filter with SystemC modules connected with SystemC FIFO channels. The homework was devided into two parts; below are the descriptions of both parts 1 and 2, alongside the algorithm used to implement them.
 
     The input image was given as
     ![Input image](Gaussian/lena_std_short.bmp)
 
-Part 1: Gaussian Blur with FIFO channels
+**Part 1: Gaussian Blur with FIFO channels**
     In this part, a code base from lab 2 was provided with all channel connected already connected. Originally, we have two modules, one, the testbench which will load the image, take in the image datas to then send them to the Gaussian filter module where the Gaussian kernel is stored.
     
-    How is it implemented? 
+    **How is it implemented?** 
      ![Implementation ](https://github.com/freud96/EE6470_HW1/blob/main/part%201.JPG)
     The system is synchronous, there is transfer of 3 color pixels from the testbench to the Gaussian filter module which will multiply each entry pixel by its corresponding kernel value. The number of pixel transfer sent/receive between the two modules is 589824. We have such huge amount because of the a single a to find the convolution of a centered pixel, the module also sends its other 8 neighborhood. so we can find the value as: 3*256*256*9. the simulation time is 655358 ns. 
     ![](result_part1.png)
 
-   **the output image:**
+   the output image:
     ...
 
 Part 2: Data movement with row buffers
