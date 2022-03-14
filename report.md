@@ -12,7 +12,7 @@ Part 1: Gaussian Blur with FIFO channels
     In this part, a code base from lab 2 was provided with all channel connected already connected. Originally, we have two modules, one, the testbench which will load the image, take in the image datas to then send them to the Gaussian filter module where the Gaussian kernel is stored.
     
     How is it implemented? 
-    https://github.com/freud96/EE6470_HW1/blob/main/part%201.JPG
+     ![Implementation ](ttps://github.com/freud96/EE6470_HW1/blob/main/part%201.JPG)
     The system is synchronous, there is transfer of 3 color pixels from the testbench to the Gaussian filter module which will multiply each entry pixel by its corresponding kernel value. The number of pixel transfer sent/receive between the two modules is 589824. We have such huge amount because of the a single a to find the convolution of a centered pixel, the module also sends its other 8 neighborhood. so we can find the value as: 3*256*256*9. the simulation time is 655358 ns. 
     ![](result_part1.png)
 
