@@ -25,7 +25,7 @@ The GitHub repo link for HW1 is as follow: https://github.com/freud96/EE6470_HW1
     In the Gaussian Filter module there will be three row buffers to store the incoming data so that they can be re-used. at first the buffers have the value zero. the program will start computing output pixels after second iteration in module testbench. the row buffers' size is 3*258 because we want the targeted pixel to be in the middle. After each iteration,the incoming datas will be stored in the last row, the ones that were stored will be shifted up, meaning that the top will be pushed out; the row buffers serve as FIFOs. The output is almost same, and as compared to part 1's result, this not only take less time as we don't need to wait on all 8 neighborhood pixels for the output pixels to be computed. The number of pixel transferred through FIFO channels is way less than found in part 1. 
     ![](result_part2.JPG)
     
-    the output image for part 2 can be found at: https://github.com/freud96/EE6470_HW1/blob/5e1c2192c286b3f372e8b836354b1500c7c59859/Gaussian1/build/out.bmp
+    the output image for part 2 can be found at:https://github.com/freud96/EE6470_HW1/blob/2a29ffe0b1b70e88c499cf627ff226d9614f27a7/Gaussian1/build/out.bmp
 
 Note: For result of pixel transfer of both part, only from testbench to Gaussian filter pixel transfer was calculated; meaning that the output's transfer effort isn't included.    
 
