@@ -6,36 +6,39 @@ using namespace std;
 #include "Testbench.h"
 
 unsigned char header[54] = {
-    0x42,          // identity : B
-    0x4d,          // identity : M
-    0,    0, 0, 0, // file size
-    0,    0,       // reserved1
-    0,    0,       // reserved2
-    54,   0, 0, 0, // RGB data offset
-    40,   0, 0, 0, // struct BITMAPINFOHEADER size
-    0,    0, 0, 0, // bmp width
-    0,    0, 0, 0, // bmp height
-    1,    0,       // planes
-    24,   0,       // bit per pixel
-    0,    0, 0, 0, // compression
-    0,    0, 0, 0, // data size
-    0,    0, 0, 0, // h resolution
-    0,    0, 0, 0, // v resolution
-    0,    0, 0, 0, // used colors
-    0,    0, 0, 0  // important colors
+    0x42,        // identity : B
+    0x4d,        // identity : M
+    0, 0, 0, 0,  // file size
+    0, 0,        // reserved1
+    0, 0,        // reserved2
+    54, 0, 0, 0, // RGB data offset
+    40, 0, 0, 0, // struct BITMAPINFOHEADER size
+    0, 0, 0, 0,  // bmp width
+    0, 0, 0, 0,  // bmp height
+    1, 0,        // planes
+    24, 0,       // bit per pixel
+    0, 0, 0, 0,  // compression
+    0, 0, 0, 0,  // data size
+    0, 0, 0, 0,  // h resolution
+    0, 0, 0, 0,  // v resolution
+    0, 0, 0, 0,  // used colors
+    0, 0, 0, 0   // important colors
 };
 
 Testbench::Testbench(sc_module_name n)
-    : sc_module(n), output_rgb_raw_data_offset(54) {
+    : sc_module(n), output_rgb_raw_data_offset(54)
+{
   SC_THREAD(do_sobel);
   sensitive << i_clk.pos();
   dont_initialize();
 }
 
-int Testbench::read_bmp(string infile_name) {
+int Testbench::read_bmp(string infile_name)
+{
   FILE *fp_s = NULL; // source file handler
   fp_s = fopen(infile_name.c_str(), "rb");
-  if (fp_s == NULL) {
+  if (fp_s == NULL)
+  {
     printf("fopen %s error\n", infile_name.c_str());
     return -1;
   }
@@ -58,14 +61,16 @@ int Testbench::read_bmp(string infile_name) {
 
   source_bitmap =
       (unsigned char *)malloc((size_t)width * height * bytes_per_pixel);
-  if (source_bitmap == NULL) {
+  if (source_bitmap == NULL)
+  {
     printf("malloc images_s error\n");
     return -1;
   }
 
   target_bitmap =
       (unsigned char *)malloc((size_t)width * height * bytes_per_pixel);
-  if (target_bitmap == NULL) {
+  if (target_bitmap == NULL)
+  {
     printf("malloc target_bitmap error\n");
     return -1;
   }
@@ -77,12 +82,14 @@ int Testbench::read_bmp(string infile_name) {
   return 0;
 }
 
-int Testbench::write_bmp(string outfile_name) {
+int Testbench::write_bmp(string outfile_name)
+{
   FILE *fp_t = NULL;      // target file handler
   unsigned int file_size; // file size
 
   fp_t = fopen(outfile_name.c_str(), "wb");
-  if (fp_t == NULL) {
+  if (fp_t == NULL)
+  {
     printf("fopen %s error\n", outfile_name.c_str());
     return -1;
   }
@@ -120,45 +127,56 @@ int Testbench::write_bmp(string outfile_name) {
   return 0;
 }
 
-void Testbench::do_sobel() {
-  int x, y;        // for loop counter
+void Testbench::do_sobel()
+{
+  int x, y;              // for loop counter
   unsigned char R, G, B; // color of R, G, B
   int total;
 
   o_rst.write(false);
   o_rst.write(true);
-  for (y = 0; y != height; ++y) {
-    for (x = 0; x != width; ++x) {
-      
-            R = *(source_bitmap +
-                  bytes_per_pixel * (width * (y) + (x)) + 2);
-            G = *(source_bitmap +
-                  bytes_per_pixel * (width * (y ) + (x)) + 1);
-            B = *(source_bitmap +
-                  bytes_per_pixel * (width * (y ) + (x )) + 0);
-
-          nbr_pixel+=3;
-          o_r[x].write(R);
-          o_g[x].write(G);
-          o_b[x].write(B);
-          wait(1); //emulate channel delay
-        
-if(y>1)
+  for (y = 0; y != height+2; ++y)
+  {
+    for (x = 0; x != width; ++x)
+    {
+if(y>=height)
 {
-if(i_result[x].num_available()==0) wait(i_result[x].data_written_event());
-      total = i_result[x].read();
-      //cout << "Now at " << sc_time_stamp() << endl; //print current sc_time
-
-
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 2) = total;
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 1) = total;
-        *(target_bitmap + bytes_per_pixel * (width * y + x) + 0) = total;
-
+  R=0;
+  G=0;
+  B=0;
 }
-      
+      R = *(source_bitmap +
+            bytes_per_pixel * (width * (y) + (x)) + 2);
+      G = *(source_bitmap +
+            bytes_per_pixel * (width * (y) + (x)) + 1);
+      B = *(source_bitmap +
+            bytes_per_pixel * (width * (y) + (x)) + 0);
+
+      nbr_pixel += 3;
+      o_r[x].write(R);
+      o_g[x].write(G);
+      o_b[x].write(B);
+      // emulate channel delay
     }
-   // std::cout<<std::endl;
+     wait(1);
+    for (x = 0; x != width; ++x)
+    {
+      if (y > 0)
+      {
+        if (i_result[x].num_available() == 0)
+          wait(i_result[x].data_written_event());
+       // total = i_result[x].read();
+        // cout << "Now at " << sc_time_stamp() << endl; //print current sc_time
+        std::cout << total << std::endl;
+
+        *(target_bitmap + bytes_per_pixel * (width * (y-2) + x) + 2) = total;
+        *(target_bitmap + bytes_per_pixel * (width * (y-2) + x) + 1) = total;
+        *(target_bitmap + bytes_per_pixel * (width * (y-2) + x) + 0) = total;
+      }
+    }
   }
-  std::cout << "\nThe number of pixel transferred: "<<nbr_pixel<<std::endl;
-  sc_stop();
+  // std::cout<<std::endl;
+
+std::cout << "\nThe number of pixel transferred: " << nbr_pixel << std::endl;
+sc_stop();
 }

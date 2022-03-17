@@ -21,14 +21,14 @@ void GaussianFilter::do_filter()
   while (true)
   {
     
-    if (Count < 2)
+    if (Count < 1)
     {
       for (unsigned int x = 1; x != 257; ++x)
       {
 
-        R[Count + 1][x] = i_r[x-1].read();
-        B[Count + 1][x] = i_b[x-1].read();
-        G[Count + 1][x] = i_g[x-1].read();
+        R[2][x] = i_r[x-1].read();
+        B[2][x] = i_b[x-1].read();
+        G[2][x] = i_g[x-1].read();
       }
 
     }
@@ -36,7 +36,7 @@ void GaussianFilter::do_filter()
     {
       for (unsigned int x = 1; x != 257; ++x)
       {
-        val = 0;
+        
         temp_B[0][x] = B[1][x];
         temp_R[0][x] = R[1][x];
         temp_G[0][x] = G[1][x];
@@ -46,7 +46,9 @@ void GaussianFilter::do_filter()
         temp_B[2][x] = i_b[x-1].read();
         temp_R[2][x] = i_r[x-1].read();
         temp_G[2][x] = i_g[x-1].read();
-
+      }
+        for (unsigned int x = 1; x != 257; ++x)
+        {val = 0;
         for (int u = -1; u < 2; ++u)
         {
           for (int v = 0; v < MASK_Y; ++v)
@@ -59,7 +61,6 @@ void GaussianFilter::do_filter()
           }
         }
 
-        wait(1); // emulate module delay
        
         o_result[x-1].write(val);
 
@@ -74,8 +75,11 @@ void GaussianFilter::do_filter()
         G[2][x] = temp_G[2][x];
       }
     }
+    if(Count==0){wait(1);}
+    else{wait(2);} // emulate module delay}
     Count++;
-
+ 
+        
     
   }
  
